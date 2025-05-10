@@ -1,10 +1,10 @@
 {
-    "extends": "@tsconfig/node22/tsconfig.json",
-    "include": ["eslint.config.js"],
-    "compilerOptions": {
-        "noEmit": true,
-        "isolatedModules": true,
-        "allowJs": true,
-        "types": ["node"]
-    }
+  "extends": "@tsconfig/node22/tsconfig.json",
+  "include": ["eslint.config.js"],
+  "compilerOptions": {
+    "noEmit": true,
+    "isolatedModules": true,
+    "allowJs": true,
+    "types": ["node"]
+  }
 }
