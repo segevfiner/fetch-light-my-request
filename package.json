@@ -1,0 +1,38 @@
+{
+  "name": "fetch-light-my-axios",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "exports": {
+    "types": "./dist/inedx.d.ts",
+    "default": "./dist/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "eslint"
+  },
+  "keywords": [],
+  "author": "Segev Finer <segev208@gmail.com>",
+  "license": "TODO",
+  "packageManager": "pnpm@10.10.0",
+  "engines": {
+    "node": "^22"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.26.0",
+    "@tsconfig/node22": "^22.0.1",
+    "@types/node": "^22.15.17",
+    "eslint": "^9.26.0",
+    "globals": "^16.1.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.0"
+  },
+  "dependencies": {
+    "fetch-mock": "^12.5.2",
+    "light-my-request": "^6.6.0"
+  }
+}
