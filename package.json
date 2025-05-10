@@ -1,7 +1,7 @@
 {
-  "name": "fetch-light-my-axios",
+  "name": "fetch-light-my-request",
   "version": "0.1.0",
-  "description": "",
+  "description": "fetch-mock wrapper over light-my-request",
   "type": "module",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
@@ -11,28 +11,46 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "watch": "tsc -w",
+    "build": "tsc -b",
+    "watch": "tsc -b -w",
     "lint": "eslint"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/segevfienr/fetch-light-my-requet.git"
+  },
+  "keywords": [
+    "nodejs",
+    "fetch",
+    "fetch-mock",
+    "light-my-request",
+    "http",
+    "injection"
+  ],
   "author": "Segev Finer <segev208@gmail.com>",
-  "license": "TODO",
+  "license": "BSD-3-Clause",
   "packageManager": "pnpm@10.10.0",
   "engines": {
     "node": "^22"
+  },
+  "dependencies": {
+    "fetch-mock": "^12.5.2",
+    "light-my-request": "^6.6.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.26.0",
     "@tsconfig/node22": "^22.0.1",
     "@types/node": "^22.15.17",
     "eslint": "^9.26.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.0",
     "globals": "^16.1.0",
+    "prettier": "^3.5.3",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.32.0"
   },
-  "dependencies": {
-    "fetch-mock": "^12.5.2",
-    "light-my-request": "^6.6.0"
-  }
+  "files": [
+    "src",
+    "dist"
+  ]
 }
