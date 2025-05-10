@@ -1,6 +1,7 @@
 import http from "node:http";
 import { DispatchFunc, inject } from "light-my-request";
 import { defaultFetchMockConfig, FetchMock } from "fetch-mock";
+import type { FastifyInstance } from "fastify";
 
 export interface FetchLightMyRequestOptions {
   /** Optional http server. It is used for binding the `dispatchFunc` */
@@ -49,4 +50,19 @@ export function createFetchLightMyRequest(
     });
   });
   return fetchMock.fetchHandler.bind(fetchMock);
+}
+
+export function createFetchLightMyRequestFromFastify(
+  instance: FastifyInstance,
+  opts: FetchLightMyRequestOptions = {},
+) {
+  return createFetchLightMyRequest((req, res) => {
+    instance.ready((err) => {
+      if (err) {
+        res.emit("error", err);
+        return;
+      }
+      instance.routing(req, res);
+    });
+  }, opts);
 }
