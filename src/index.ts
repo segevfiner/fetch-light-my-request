@@ -28,10 +28,10 @@ type HTTPMethods =
   | "OPTIONS"
   | "options";
 
-export function createFetchLightMyRequest(
+export function createFetchMockLightMyRequest(
   dispatchFunc: DispatchFunc,
   opts: FetchLightMyRequestOptions = {},
-) {
+): FetchMock {
   const fetchMock = new FetchMock({ ...defaultFetchMockConfig });
   fetchMock.route("*", async (callLog) => {
     const res = await inject(dispatchFunc, {
@@ -49,14 +49,22 @@ export function createFetchLightMyRequest(
       headers: res.headers as Record<string, string>,
     });
   });
+  return fetchMock;
+}
+
+export function createFetchLightMyRequest(
+  dispatchFunc: DispatchFunc,
+  opts: FetchLightMyRequestOptions = {},
+): typeof fetch {
+  const fetchMock = createFetchMockLightMyRequest(dispatchFunc, opts);
   return fetchMock.fetchHandler.bind(fetchMock);
 }
 
-export function createFetchLightMyRequestFromFastify(
+export function createFetchMockLightMyRequestFromFastify(
   instance: FastifyInstance,
   opts: FetchLightMyRequestOptions = {},
-) {
-  return createFetchLightMyRequest((req, res) => {
+): FetchMock {
+  return createFetchMockLightMyRequest((req, res) => {
     instance.ready((err) => {
       if (err) {
         res.emit("error", err);
@@ -65,4 +73,12 @@ export function createFetchLightMyRequestFromFastify(
       instance.routing(req, res);
     });
   }, opts);
+}
+
+export function createFetchLightMyRequestFromFastify(
+  instance: FastifyInstance,
+  opts: FetchLightMyRequestOptions = {},
+): typeof fetch {
+  const fetchMock = createFetchMockLightMyRequestFromFastify(instance, opts);
+  return fetchMock.fetchHandler.bind(fetchMock);
 }

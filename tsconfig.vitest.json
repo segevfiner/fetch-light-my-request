@@ -3,6 +3,6 @@
   "include": ["test/**/*"],
   "compilerOptions": {
     "noEmit": true,
-    "rootDir": ".",
+    "rootDir": "."
   }
 }
