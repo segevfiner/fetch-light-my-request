@@ -1,7 +1,7 @@
 {
   "name": "fetch-light-my-request",
   "version": "0.1.0",
-  "description": "fetch-mock wrapper over light-my-request.",
+  "description": "fetch-mock wrapper over light-my-request",
   "type": "module",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
