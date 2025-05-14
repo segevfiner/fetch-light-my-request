@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/segevfienr/fetch-light-my-requet.git"
+    "url": "git+https://github.com/segevfiner/fetch-light-my-request.git"
   },
   "keywords": [
     "nodejs",
