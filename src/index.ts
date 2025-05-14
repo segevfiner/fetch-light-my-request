@@ -3,6 +3,9 @@ import { DispatchFunc, inject } from "light-my-request";
 import { defaultFetchMockConfig, FetchMock } from "fetch-mock";
 import type { FastifyInstance } from "fastify";
 
+/**
+ * Options for the created fetch mock.
+ */
 export interface FetchLightMyRequestOptions {
   /** Optional http server. It is used for binding the `dispatchFunc` */
   server?: http.Server;
@@ -28,6 +31,11 @@ type HTTPMethods =
   | "OPTIONS"
   | "options";
 
+/**
+ * Create a [FetchMock] from a light-my-request dispatch function.
+ *
+ * [FetchMock]: https://www.wheresrhys.co.uk/fetch-mock/docs
+ */
 export function createFetchMockLightMyRequest(
   dispatchFunc: DispatchFunc,
   opts: FetchLightMyRequestOptions = {},
@@ -52,6 +60,10 @@ export function createFetchMockLightMyRequest(
   return fetchMock;
 }
 
+/**
+ * Create a mock fetch function (Directly reuturing the `FetchMock.fetchHandler`) from a
+ * light-my-request dispatch function.
+ */
 export function createFetchLightMyRequest(
   dispatchFunc: DispatchFunc,
   opts: FetchLightMyRequestOptions = {},
@@ -60,6 +72,11 @@ export function createFetchLightMyRequest(
   return fetchMock.fetchHandler.bind(fetchMock);
 }
 
+/**
+ * Create a [FetchMock] from a Fastify server.
+ *
+ * [FetchMock]: https://www.wheresrhys.co.uk/fetch-mock/docs
+ */
 export function createFetchMockLightMyRequestFromFastify(
   instance: FastifyInstance,
   opts: FetchLightMyRequestOptions = {},
@@ -75,6 +92,10 @@ export function createFetchMockLightMyRequestFromFastify(
   }, opts);
 }
 
+/**
+ * Create a mock fetch function (Directly reuturing the `FetchMock.fetchHandler`) from Fastify
+ * server.
+ */
 export function createFetchLightMyRequestFromFastify(
   instance: FastifyInstance,
   opts: FetchLightMyRequestOptions = {},
