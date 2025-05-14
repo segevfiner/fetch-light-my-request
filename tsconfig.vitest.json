@@ -3,6 +3,7 @@
   "include": ["test/**/*"],
   "compilerOptions": {
     "noEmit": true,
-    "rootDir": "."
+    "rootDir": ".",
+    "tsBuildInfoFile": "tsconfig.vitest.tsbuildinfo"
   }
 }
