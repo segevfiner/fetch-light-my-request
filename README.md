@@ -4,6 +4,8 @@
 
 [fetch-mock] wrapper over [light-my-request].
 
+[Documentation](https://segevfiner.github.io/fetch-light-my-request/)
+
 [fetch-mock]: https://www.wheresrhys.co.uk/fetch-mock/
 [light-my-request]: https://www.npmjs.com/package/light-my-request
 
