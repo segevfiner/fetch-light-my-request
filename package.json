@@ -1,6 +1,6 @@
 {
   "name": "fetch-light-my-request",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "fetch-mock wrapper over light-my-request",
   "type": "module",
   "types": "./dist/index.d.ts",
@@ -10,6 +10,7 @@
     "default": "./dist/index.js"
   },
   "scripts": {
+    "prepack": "pnpm build",
     "test": "vitest",
     "build": "tsc -b",
     "watch": "tsc -b -w",
@@ -36,7 +37,7 @@
     "node": ">=20"
   },
   "dependencies": {
-    "fastify": ">=4",
+    "fastify": "^5.3.3",
     "fetch-mock": "^12.5.2",
     "light-my-request": "^6.6.0"
   },
@@ -44,7 +45,7 @@
     "@eslint/js": "^9.26.0",
     "@fetch-mock/vitest": "^0.2.13",
     "@tsconfig/node22": "^22.0.1",
-    "@types/node": "^22.15.17",
+    "@types/node": "^22.15.18",
     "eslint": "^9.26.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.4.0",
@@ -52,7 +53,7 @@
     "prettier": "^3.5.3",
     "typedoc": "^0.28.4",
     "typescript": "~5.8.3",
-    "typescript-eslint": "^8.32.0",
+    "typescript-eslint": "^8.32.1",
     "vitest": "^3.1.3"
   },
   "files": [
