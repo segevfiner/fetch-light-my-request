@@ -2,7 +2,8 @@
 [![CI](https://github.com/segevfiner/fetch-light-my-request/actions/workflows/ci.yml/badge.svg)](https://github.com/segevfiner/fetch-light-my-request/actions/workflows/ci.yml)
 [![Docs](https://github.com/segevfiner/fetch-light-my-request/actions/workflows/docs.yml/badge.svg)](https://segevfiner.github.io/fetch-light-my-request/)
 
-[fetch-mock] wrapper over [light-my-request].
+[fetch-mock] wrapper over [light-my-request]. This is useful to attach `fetch` based HTTP clients to
+a tested plain HTTP or Fastify server.
 
 [Documentation](https://segevfiner.github.io/fetch-light-my-request/)
 
