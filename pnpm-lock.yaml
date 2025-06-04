@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       fastify:
-        specifier: ^5.3.3
+        specifier: '>=4'
         version: 5.3.3
       fetch-mock:
         specifier: ^12.5.2
