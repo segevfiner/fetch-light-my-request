@@ -61,7 +61,7 @@ export function createFetchMockLightMyRequest(
 }
 
 /**
- * Create a mock fetch function (Directly reuturing the `FetchMock.fetchHandler`) from a
+ * Create a mock fetch function (Directly returning the `FetchMock.fetchHandler`) from a
  * light-my-request dispatch function.
  */
 export function createFetchLightMyRequest(
@@ -93,7 +93,7 @@ export function createFetchMockLightMyRequestFromFastify(
 }
 
 /**
- * Create a mock fetch function (Directly reuturing the `FetchMock.fetchHandler`) from Fastify
+ * Create a mock fetch function (Directly returning the `FetchMock.fetchHandler`) from Fastify
  * server.
  */
 export function createFetchLightMyRequestFromFastify(
