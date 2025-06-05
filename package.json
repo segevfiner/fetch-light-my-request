@@ -58,6 +58,11 @@
   "peerDependencies": {
     "fastify": ">=4"
   },
+  "peerDependenciesMeta": {
+    "fastify": {
+      "optional": true
+    }
+  },
   "files": [
     "src",
     "dist"
