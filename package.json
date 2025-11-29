@@ -32,27 +32,27 @@
   ],
   "author": "Segev Finer <segev208@gmail.com>",
   "license": "MIT",
-  "packageManager": "pnpm@10.19.0+sha512.c9fc7236e92adf5c8af42fd5bf1612df99c2ceb62f27047032f4720b33f8eacdde311865e91c411f2774f618d82f320808ecb51718bfa82c060c4ba7c76a32b8",
+  "packageManager": "pnpm@10.24.0+sha512.01ff8ae71b4419903b65c60fb2dc9d34cf8bb6e06d03bde112ef38f7a34d6904c424ba66bea5cdcf12890230bf39f9580473140ed9c946fef328b6e5238a345a",
   "engines": {
     "node": ">=20"
   },
   "dependencies": {
-    "fetch-mock": "^12.5.5",
+    "fetch-mock": "^12.6.0",
     "light-my-request": "^6.6.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.38.0",
-    "@fetch-mock/vitest": "^0.2.16",
-    "@tsconfig/node22": "^22.0.2",
-    "@types/node": "^22.18.12",
-    "eslint": "^9.38.0",
+    "@eslint/js": "^9.39.1",
+    "@fetch-mock/vitest": "^0.2.18",
+    "@tsconfig/node22": "^22.0.5",
+    "@types/node": "^22.19.1",
+    "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
-    "globals": "^16.4.0",
-    "prettier": "^3.6.2",
-    "typedoc": "^0.28.14",
+    "globals": "^16.5.0",
+    "prettier": "^3.7.3",
+    "typedoc": "^0.28.15",
     "typescript": "~5.8.3",
-    "typescript-eslint": "^8.46.2",
+    "typescript-eslint": "^8.48.0",
     "vitest": "^3.2.4"
   },
   "peerDependencies": {
